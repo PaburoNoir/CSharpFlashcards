@@ -1,0 +1,94 @@
+body {
+  background-color: #f7e3e3;
+  background-image:
+    radial-gradient(circle at 25% 75%, #fff 0, #fff 10%, #f7e3e3 11%, #f7e3e3 100%),
+    radial-gradient(circle at 75% 25%, #fff 0, #fff 10%, #f7e3e3 11%, #f7e3e3 100%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.flashcard {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  margin: 20px auto;
+  perspective: 800px;
+}
+
+.front,
+.title,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #b39ddb;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 17px;
+  font-size-adjust: 0.3; /* added property */
+  -webkit-text-size-adjust: 30%;
+  -ms-text-size-adjust: 30%;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+  backface-visibility: hidden;
+}
+
+.front h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.front p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.back p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* Back and Next Button styles */
+
+.flashcard-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.flashcard-nav button {
+  background-color: #b39ddb;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.flashcard-nav button:hover {
+  background-color: #9575cd;
+}
+
+.flashcard-nav button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
